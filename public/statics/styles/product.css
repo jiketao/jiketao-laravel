@@ -385,7 +385,7 @@ div.hot-topic-slide:before {
   line-height: 500px;
 }
 div.footer {
-  background-color: #fff;
+  background: #F3F3F3;
   margin-top: 100px;
   min-height: 140px;
   width: 100%;

@@ -29,6 +29,16 @@
         <div class="main-content">
             @yield('content')
         </div>
+
+        <div class="footer"  >
+            <div class="footer-align"  >
+                <a href="#" class="cell">关于极客淘</a>
+                <a href="#" class="cell">Github</a>
+                <a href="#" class="cell">Team：特🐶，6174，livoras</a>
+                <a href="#" class="cell">Copyright@极客淘</a>
+            </div>
+        </div>
+
         <script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
         <script src="/statics/scripts/home.js"></script>
     </body>
