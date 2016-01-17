@@ -1,0 +1,74 @@
+@import "../common/mixins.less";
+
+div.product-summary {
+  .content-padding();
+  overflow: hidden;
+  div.product-picture-align {
+    width: 45%;
+    float: left;
+    margin-right: 2%;
+  }
+  div.product-profile {
+    width: 53%;
+    float: left;
+    //outline: 1px solid yellow;
+    h3 {
+      font-size: 20px;
+      margin-bottom: 30px;
+      // color: #000;
+    }
+    section {
+      margin-bottom: 10px;
+      font-size: 14px;
+      padding: 0 10px;
+      &.content-area {
+        min-height: 100px;
+        h4 {
+          margin-bottom: 5px;
+        }
+        padding: 10px;
+        background-color: #f8f8f8;
+        @margin: 30px;
+        margin-top: @margin;
+        margin-bottom: @margin;
+        border-radius: 3px;
+      }
+      &.tags {
+        margin-top: 20px;
+      }
+    }
+    span {
+      &.money {
+        font-size: 30px;
+        font-weight: bold;
+        color: #c40000;
+      }
+    }
+    i.RMB::after {
+      content: "¥ ";
+      font-style: normal;
+      font-size: 15px;
+    }
+    span.name {
+      color: #000;
+    }
+    span.name::after {
+      content: "：";
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  div.product-summary div.product-picture-align {
+    width: 100%;
+    div.product-picture {
+      img.show {
+        height: 400px;
+      }
+    }
+  }
+  div.product-summary div.product-profile {
+    margin-top: 15px;
+    width: 100%;
+  }
+}

@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/product/{pid?}', function($id="1") {
+// 	return 'product'.$id;
+// });
+
+Route::get('/product/{pid?}', 'ProductController@showProduct');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,5 +33,5 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    // 
 });
