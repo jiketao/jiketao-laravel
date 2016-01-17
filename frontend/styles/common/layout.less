@@ -76,12 +76,6 @@ div.menus-wrapper {
   }
 }
 
-div.nav-bar {
-  background-color: @primary-color;
-  position: relative;
-  height: @menus-height;
-  margin-bottom: 10px;
-}
 
 @media (max-width: 960px) {
   div.align-content {
@@ -92,28 +86,7 @@ div.nav-bar {
   }
 }
 
-@media (min-width: 960px) {
-  div.nav-bar {
-    position: relative;
-    height: @menus-height;
-    margin-bottom: 10px;
-    div.align-content {
-      height: 0;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      .content();
-      //height: 100%;
-      img.avatar {
-        float: right;
-        margin-top: (@menus-height - @search-height) / 2;
-        margin-left: 15px;
-      }
-    }
-  }
-}
+
 
 @media (max-width: 850px) {
   div.menus-wrapper {
@@ -132,43 +105,6 @@ div.nav-bar {
   }
 }
 
-@media (max-width: 730px) {
-  div.nav-bar {
-    margin-bottom: 40px;
-  }
-  @height: 35px;
-  ul.menus {
-    position: absolute;
-    bottom: -@height;
-    width: 100%;
-    /* border-top: 1px solid #ccc; */
-    height: @height - 1;
-    li.menu-item {
-      line-height: @height;
-    }
-  }
-  div.align-content {
-    div.search {
-      width: 60%;
-    }
-  }
-}
-
-@media (max-width: 319px) {
-  div.align-content {
-    div.search {
-      width: 45%;
-    }
-  }
-}
-
-@media (max-width: 200px) {
-  div.align-content {
-    div.search {
-      display: none;
-    }
-  }
-}
 
 //============== Posts content =============
 
