@@ -41,7 +41,7 @@ gulp.task("default", [
   "html",
   "styles",
   "scripts",
-  // "connect",
+  "connect",
   "test",
   "watch"
 ])
@@ -85,15 +85,16 @@ gulp.task("scripts", function() {
 })
 
 gulp.task("connect", function() {
-  connect.server({
-    root: dist.root,
-    livereload: true,
-    middleware: function(connect, opt) {
-      return [rest.rester({
-        context: "/"
-      })]
-    }
-  })
+  livereload()
+  // connect.server({
+  //   root: dist.root,
+  //   livereload: true,
+  //   middleware: function(connect, opt) {
+  //     return [rest.rester({
+  //       context: "/"
+  //     })]
+  //   }
+  // })
 })
 
 gulp.task("test", function() {
@@ -105,6 +106,9 @@ gulp.task("watch", function() {
   gulp.watch(src.html, ["html"])
   gulp.watch("frontend/styles/**/*", ["styles"])
   gulp.watch("frontend/scripts/**/*", ["scripts"])
+  gulp.watch(["resources/**/*", "app/**/*"], function() {
+    reload()
+  })
 })
 
 function reload() {
