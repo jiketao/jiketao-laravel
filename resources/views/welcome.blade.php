@@ -1,6 +1,6 @@
 @extends('layouts.index')
 
-@section('title', '极客淘')
+@section('title', '极客淘@beta')
 
 @section('content')    
     <!-- BRAND-RECOMMEND-SECTION -->
@@ -19,7 +19,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="category-recommend">
+                {{-- <div class="category-recommend">
                     <ul>
                         <li>
                             推荐1： Mac Pro 
@@ -28,7 +28,7 @@
                             推荐2：Dell 
                         </li>
                     </ul>
-                </div>
+                </div> --}}
                 <div class="category-items">
                     <ul>
                         @foreach ($subCategories as $subCategory)

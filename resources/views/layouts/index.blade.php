@@ -15,7 +15,7 @@
         <div class="nav-bar">
             <div class="row-wrap" >
                 <div class="brand-logo-container" >
-                    <a href="/" >极客淘</a>
+                    <a href="/" >极客淘<small style="font-size: 14px;">@beta</small> </a>
                 </div>
                 <div class="menu pull-right" >
                     <div class="search" >
