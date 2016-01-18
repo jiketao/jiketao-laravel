@@ -33,7 +33,7 @@
                     <ul>
                         @foreach ($subCategories as $subCategory)
                             <li class="category-item">
-                                <a href="">{{$subCategory}}</a> 
+                                <a href="/category">{{$subCategory}}</a> 
                             </li>
                         @endforeach
                     </ul>

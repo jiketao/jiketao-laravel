@@ -13,6 +13,6 @@ use App\Http\Controllers\Controller;
 class ProductController extends Controller
 {
     public function showProduct(Request $request, $pid = '1') {
-    	return 'show product in controller'.$pid;
+    	return view('product');
     }
 }

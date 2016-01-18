@@ -25,6 +25,10 @@ Route::get('/', function () {
 	return view('welcome')->with('categories', $categories);
 });
 
+Route::get('/category/{cid?}', function() {
+	return view('category');
+});
+
 // Route::get('/product/{pid?}', function($id="1") {
 // 	return 'product'.$id;
 // });
