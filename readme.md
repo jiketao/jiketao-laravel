@@ -5,6 +5,8 @@
 
 ## 配置
 
+.env 使用 127.0.0.1 替换 localhost 
+
 nignx
 ```
     location / {
