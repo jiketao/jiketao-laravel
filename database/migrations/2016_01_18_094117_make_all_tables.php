@@ -36,34 +36,36 @@ class MakeAllTables extends Migration
          */
         Schema::create('articles', function(Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('title');
             $table->string('name')->nullable();
             $table->integer('category_id');
+
             $table->string('keywords');
-            $table->boolean('display');
             $table->text('description');
             $table->mediumText('content');
-            $table->integer('views')->default(0);
+            $table->string('cover')->nullable();
+
+            $table->boolean('display');
             $table->timestamp('modified_at')->default('0000-00-00 00:00:00');
+            $table->timestamps();
         });
 
         /**
          * product tables
          */
-        Schema::create('product', function(Blueprint $table) {
+        Schema::create('products', function(Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('name');
             $table->string('keywords');
 
-            $table->string('cover_image');
-            $table->boolean('display');
+            $table->string('cover');
             $table->text('description');
-            $table->string('gallery')
+            $table->string('gallery');
             $table->mediumText('about_content');
             
+            $table->boolean('display');
             $table->timestamp('modified_at')->default('0000-00-00 00:00:00');
+            $table->timestamps();
         });
 
         /**
@@ -71,11 +73,11 @@ class MakeAllTables extends Migration
          */
         Schema::create('categories', function(Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('name');
             $table->string('display_name');
             $table->text('description');
             $table->tinyInteger('sort')->default(0);
+            $table->timestamps();
         });
         
         /**
@@ -83,13 +85,13 @@ class MakeAllTables extends Migration
          */
         Schema::create('tags', function(Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('name');
             $table->string('display_name');
             $table->text('description');
+            $table->timestamps();
         });
 
-        Schema::create('model_tag', function(Blueprint $table) {
+        Schema::create('model_tags', function(Blueprint $table) {
             $table->integer('model_id')->unique();
             $table->integer('tag_id');
             $table->integer('model_type')->default(0);
@@ -99,7 +101,7 @@ class MakeAllTables extends Migration
         /**
          * relationship between articles and products
          */
-        Schema::create('model_relationship', function(Blueprint $table) {
+        Schema::create('model_relationships', function(Blueprint $table) {
             $table->integer('model_id')->unique();
             $table->integer('relate_id');
             $table->integer('model_type')->default(0);
@@ -118,5 +120,10 @@ class MakeAllTables extends Migration
         Schema::drop('users');
         Schema::drop('password_resets');
         Schema::drop('articles');
+        Schema::drop('products');
+        Schema::drop('categories');
+        Schema::drop('tags');
+        Schema::drop('model_tags');
+        Schema::drop('model_relationships');
     }
 }
