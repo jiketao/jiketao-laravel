@@ -19,7 +19,7 @@
     <div class="product-main-container">
         <ul class="topic-nav">
             <li class="nav-item">所有分类 <i class="fa fa-caret-right"></i></li>
-            <li class="nav-item">最新</li>
+            <li class="nav-item active">最新</li>
             <li class="nav-item">热门</li>
             <li class="nav-item">分类</li>
         </ul>

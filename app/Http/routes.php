@@ -12,6 +12,10 @@
 */
 
 Route::get('/', function () {
+	return view('welcome')->with('active_menu', 'news');
+});
+
+Route::get('/categories', function() {
 	$categories = array(
 		"手机通讯" => array("智能手机","非智能手机","对讲机","手机蓝牙耳机"),
 		"摄影摄像" => array("单反机身","微单相机","数码相机","家用摄像机","专业摄像机","单反镜头","微单镜头","脚架","闪光灯"),
@@ -22,11 +26,13 @@ Route::get('/', function () {
 		"网络设备" => array("路由器","交换机","网卡","电脑配件","主板","CPU","显卡","固态硬盘","普通硬盘","内存","机箱","电脑电源","显示器","刻录机","散热器","声卡","UPS电源","其它电脑配件"),
 		"穿戴设备" => array("智能手环","智能手表","智能眼镜","其它智能设备")
 	);
-	return view('welcome')->with('categories', $categories);
+	return view('categories')
+            ->with('categories', $categories)
+            ->with('active_menu', 'categories');
 });
 
 Route::get('/category/{cid?}', function() {
-	return view('category');
+	return view('category')->with('active_menu', '');
 });
 
 // Route::get('/product/{pid?}', function($id="1") {
