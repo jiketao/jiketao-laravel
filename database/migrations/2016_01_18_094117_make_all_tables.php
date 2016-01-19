@@ -44,6 +44,7 @@ class MakeAllTables extends Migration
             $table->text('description');
             $table->mediumText('content');
             $table->string('cover')->nullable();
+            $table->integer('pin')->default(0);
 
             $table->boolean('display');
             $table->timestamp('modified_at')->default('0000-00-00 00:00:00');

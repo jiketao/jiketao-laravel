@@ -14,7 +14,7 @@
 		@foreach ([1, 2, 3, 4, 5, 6, 7] as $index)
 		<div class="product" >
 			<div class="item-right" >
-				<img src="assets/pig.jpg" >
+				<img src="http://7xkn9n.com1.z0.glb.clouddn.com/image%2F55acdbb4b84b4.jpeg_d320.jpg" >
 			</div>
 			<div class="item-left" >
 				<h3 class="item-title" >

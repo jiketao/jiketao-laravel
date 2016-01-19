@@ -18,7 +18,9 @@ var src = {
   // 样式和逻辑都只编译入口文件
   styles: "frontend/styles/*.less",
   scripts: "frontend/scripts/*.js",
-  html: "frontend/*.html"
+  html: "frontend/*.html",
+  lib: "frontend/lib/**/*",
+  assets: "frontend/assets/**/*"
 }
 
 var dist = {
@@ -53,9 +55,9 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   gulp.src(["bower_components/**/*"])
     .pipe(gulp.dest(dist.root + "/lib"))
-  gulp.src(["lib/**/*"])
+  gulp.src(src.lib)
     .pipe(gulp.dest(dist.root + "/lib"))
-  gulp.src(["assets/**/*"])
+  gulp.src(src.assets)
     .pipe(gulp.dest(dist.root + "/assets"))
 })
 
@@ -86,15 +88,6 @@ gulp.task("scripts", function() {
 
 gulp.task("connect", function() {
   livereload()
-  // connect.server({
-  //   root: dist.root,
-  //   livereload: true,
-  //   middleware: function(connect, opt) {
-  //     return [rest.rester({
-  //       context: "/"
-  //     })]
-  //   }
-  // })
 })
 
 gulp.task("test", function() {
