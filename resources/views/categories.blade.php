@@ -19,24 +19,33 @@
                     </li>
                 </ul>
             </div>
-            {{-- <div class="category-recommend">
-                <ul>
-                    <li>
-                        推荐1： Mac Pro
-                    </li>
-                    <li>
-                        推荐2：Dell
-                    </li>
-                </ul>
-            </div> --}}
             <div class="category-items">
-                <ul>
-                    @foreach ($subCategories as $subCategory)
-                        <li class="category-item">
+                <table class="category-grid-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($subCategories as $index => $subCategory)
+                        @if ($index % 5 === 0)
+                            @if ($index > 0)
+                            </tr>
+                            @endif
+                            <tr>
+                        @endif
+                        <td class="category-item">
                             <a href="/category">{{$subCategory}}</a>
-                        </li>
+                        </td>
                     @endforeach
-                </ul>
+                    </tr>
+                    </tbody>
+                </table>
+
             </div>
         </div>
     @endforeach

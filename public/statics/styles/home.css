@@ -303,6 +303,9 @@ div.sku div.sku-right div.sku-right-bottom div.sku-right-bottom-right {
 .product-categories {
   padding-top: 20px;
 }
+.product-categories .category {
+  margin: 20px 0;
+}
 .product-categories .category ul {
   margin: 0;
   padding: 0;
@@ -310,7 +313,6 @@ div.sku div.sku-right div.sku-right-bottom div.sku-right-bottom-right {
 .product-categories .category .category-nav {
   padding: 4px 0;
   margin-bottom: 10px;
-  border-bottom: solid 1px whitesmoke;
 }
 .product-categories .category .category-nav li {
   position: relative;
@@ -433,6 +435,23 @@ div.mask {
 div.mask.show {
   opacity: 0.6;
   display: block;
+}
+.category-grid-table {
+  width: 100%;
+}
+.category-grid-table tr th {
+  width: 20%;
+}
+.category-grid-table tr td {
+  border: solid 1px #eee;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  background: #FDFDFD;
+}
+.category-grid-table tr td a {
+  color: #666;
+  font-weight: bold;
 }
 /**
  * product nav box
