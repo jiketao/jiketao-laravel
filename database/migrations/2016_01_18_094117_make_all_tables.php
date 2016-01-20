@@ -80,7 +80,7 @@ class MakeAllTables extends Migration
             $table->tinyInteger('sort')->default(0);
             $table->timestamps();
         });
-        
+
         /**
          * tag tables
          */
