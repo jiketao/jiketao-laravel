@@ -36,7 +36,7 @@
         @foreach ([1, 2, 3, 4, 5, 6] as $index)
         <div class="topic">
             <div class="topic-description">
-                <a href=""> 为了让他叫知道 购买 RX 100 的有多少坑, 我来摆一摆今天我的经验, 首先.... </a>
+                <a href="/topic/0"> 为了让他叫知道 购买 RX 100 的有多少坑, 我来摆一摆今天我的经验, 首先.... </a>
             </div>
             <div class="topic-meta">
                 <span class="tag"><i class="fa fa-square text-info"></i> 测评</span>

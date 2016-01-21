@@ -1,0 +1,21 @@
+img.avatar {
+  border-radius: 50%
+}
+
+span.avatar {
+  @size-default: 40px;
+  display: inline-block;
+  width: @size-default;
+  height: @size-default;
+  margin-right: 5px;
+  vertical-align: middle;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  &.avatar-radius {
+    img {
+      border-radius: @size-default;
+    }
+  }
+}

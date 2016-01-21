@@ -35,6 +35,10 @@ Route::get('/category/{cid?}', function() {
 	return view('category')->with('active_menu', '');
 });
 
+Route::get('/topic/{tid}', function() {
+	return view('topic')->with('active_menu', '');
+});
+
 // Route::get('/product/{pid?}', function($id="1") {
 // 	return 'product'.$id;
 // });

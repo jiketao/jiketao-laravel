@@ -1,4 +1,5 @@
 @import 'category-grid-table.less';
+@import 'product-list.less';
 
 /**
  * product nav box
@@ -32,18 +33,17 @@
   width: @width;
   margin-left: 50%;
   left: -@width/2;
-  background: #999;
+  //background: #999;
   padding: 3px;
+  background: @primary-color;
   .nav-item {
     cursor: pointer;
     display: inline-block;
     padding: 16px;
-    &:hover {
-      background: #ddd;
-    }
-
-    &.active {
-      background: #ddd;
+    color: white;
+    &:hover, &.active {
+      background: white;
+      color: @primary-color;
     }
   }
 
