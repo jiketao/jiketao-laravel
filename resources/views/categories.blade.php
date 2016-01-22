@@ -10,12 +10,12 @@
 
 <!-- CATEGORYS-SECTION -->
 <div class="product-categories row-wrap">
-    @foreach ($categories as $categoryName => $subCategories)
+    @foreach ($categories as $category)
         <div class="category">
             <div class="category-nav">
                 <ul>
                     <li class="category-nav-item">
-                        <a href="">{{$categoryName}}</a>
+                        <a href="#">{{$category->name}}</a>
                     </li>
                 </ul>
             </div>
@@ -31,7 +31,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach ($subCategories as $index => $subCategory)
+                    @foreach ($category->subs as $index => $subCategory)
                         @if ($index % 5 === 0)
                             @if ($index > 0)
                             </tr>
@@ -39,7 +39,7 @@
                             <tr>
                         @endif
                         <td class="category-item">
-                            <a href="/category">{{$subCategory}}</a>
+                            <a href="/categories/{{$subCategory->id}}">{{$subCategory->name}}</a>
                         </td>
                     @endforeach
                     </tr>

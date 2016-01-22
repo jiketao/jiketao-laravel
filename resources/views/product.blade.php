@@ -2,19 +2,8 @@
 
 @section('title', '极客淘@beta')
 
-@section('content')   
-	<div class="product-header well">
-		<div class="row-wrap">
-			<h1 class="text-center">SONY 索尼黑卡 RX 100 相机</h1>
-		</div>
-		<ul class="product-nav-box">
-			<li class="nav-item active">信息</li>
-            <li class="nav-item">参数</li>
-            <li class="nav-item">二手</li>
-            <li class="nav-item">测评</li>
-            <li class="nav-item">渠道</li>
-		</ul>
-	</div>
+@section('content')
+    @include('products.snippets.header')
 
     <div class="product-main-container">
         <ul class="topic-nav">

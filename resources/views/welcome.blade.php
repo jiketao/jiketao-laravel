@@ -28,7 +28,7 @@
         @foreach ($topics as $topic)
             <div class="topic" id="Topic-{{$topic->id}}">
                 <div class="topic-description">
-                    <a href="/topic/{{$topic->id}}"> {{$topic->title}}</a>
+                    <a href="/topics/{{$topic->id}}"> {{$topic->title}}</a>
                 </div>
                 <div class="topic-meta">
                     <span class="tag"><i class="fa fa-square text-info"></i> 测评 </span>

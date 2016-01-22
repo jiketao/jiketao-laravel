@@ -5,30 +5,30 @@
 @section('content')
 	<div class="tag-header">
 		<div class="row-wrap">
-			<h1>#智能手机#</h1>
+			<h1>#{{$category->name}}#</h1>
 			<p>
-				共 <i>122</i> 个产品
+				共 <i>{{$products->count()}}</i> 个产品
 			</p>
 		</div>
 		<hr>
 	</div>
 
 	<div class="product-list row-wrap row-wrap-small">
-		@foreach ([1, 2, 3, 4, 5, 6, 7] as $index)
+		@foreach ($products as $product)
 		<div class="product row-fluid" >
-			<div class="item-left col-sm-3" style="background-image: url(http://7xkn9n.com1.z0.glb.clouddn.com/image%2F55acdbb4b84b4.jpeg_d320.jpg);" >
+			<div class="item-left col-sm-3" style="background-image: url({{$product->cover}});" >
 			</div>
 			<div class="item-right col-sm-9" >
 				<p class="item-title" >
-					<a href="/product/0" >SONY 索尼黑卡 RX 100 相机</a>
+					<a href="/products/{{$product->id}}" >{{$product->name}}</a>
 				</p>
 				<p class="item-content" >
-					<span >zczf azsxz yuseebgkqtuh</span>
+					<span >{{$product->description}}</span>
 					<span >...</span>
 				</p>
 				<div class="item-info" >
 					<span class="item-publish-date inline" >
-						<span> <i>2015-07-28</i></span>
+						<span> <i>{{$product->created_at}}</i></span>
 						<span > 发布</span>
 					</span>
 					<span >| &nbsp;</span>
