@@ -18,23 +18,28 @@ class CreateProductTables extends Migration
             // product name
             $table->string('name');
 
+            // product slug in url
+            $table->string('slug');
+
             // product discription
-            $table->text('description');
+            $table->string('description');
 
             // product keywords for SEO
-            $table->string('keywords');
+            $table->string('keywords')->default('');
 
             // product cover image
             $table->string('cover');
+
+            $table->integer('user_id')->default(0);
 
             // product category
             $table->integer('category_id');
 
             // product visible
-            $table->boolean('display');
+            $table->boolean('display')->default(true);
 
             // product detail topic id
-            $table->integer('detail_topic_id');
+            $table->integer('detail_topic_id')->nullable();
 
             // product timestamps
             $table->timestamp('modified_at')->default('0000-00-00 00:00:00');

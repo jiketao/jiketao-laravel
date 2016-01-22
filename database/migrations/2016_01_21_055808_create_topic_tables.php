@@ -18,21 +18,23 @@ class CreateTopicTables extends Migration
             // topic title
             $table->string('title');
 
-            // topic alias name in url
-            $table->string('name')->nullable();
+            // topic alias slug in url
+            $table->string('slug')->nullable();
 
             // topic category
-            $table->integer('category_id');
+            $table->integer('category_id')->nullable();
 
             // topic product
             // every topic belongs to a product
             $table->integer('product_id');
 
+            $table->integer('user_id');
+
             // every product has a product descrption topic
             $table->boolean('is_product_detail_topic')->default(false);
 
             // topic keywords for SEO
-            $table->string('keywords');
+            $table->string('keywords')->default('');
 
             // topic short description
             $table->text('description');

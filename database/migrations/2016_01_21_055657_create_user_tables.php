@@ -32,12 +32,12 @@ class CreateUserTables extends Migration
             $table->boolean('is_banned')->default(false)->index();
 
             // third party integritation
-            $table->integer('weibo_id')->index();
-            $table->string('weibo_url');
-            $table->integer('qq_id')->index();
-            $table->string('qq_url');
-            $table->integer('wechat_id')->index();
-            $table->string('wechat_url');
+            $table->integer('weibo_id')->nullable();
+            $table->string('weibo_url')->nullable();
+            $table->integer('qq_id')->nullable();
+            $table->string('qq_url')->nullable();
+            $table->integer('wechat_id')->nullable();
+            $table->string('wechat_url')->nullable();
 
             // statistic
             $table->integer('topic_count')->default(0);

@@ -15,14 +15,17 @@ class CreateCategoryTables extends Migration
         Schema::create('categories', function(Blueprint $table) {
             $table->increments('id');
 
-            // category name
-            $table->string('name');
+            // category slug name
+            $table->string('slug');
 
             // category display name
-            $table->string('display_name');
+            $table->string('name');
 
             // category description
             $table->text('description');
+
+            // 父级category
+            $table->integer('parent_id')->nullable();
 
             $table->integer('product_count')->default(0);
 
