@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-	return view('welcome')->with('active_menu', 'news');
-});
-
+Route::get('/', 'PagesController@home');
+Route::get('/product/{pid?}', 'ProductController@showProduct');
 Route::get('/categories', function() {
 	$categories = array(
 		"手机通讯" => array("智能手机","非智能手机","对讲机","手机蓝牙耳机"),
@@ -43,7 +41,6 @@ Route::get('/topic/{tid}', function() {
 // 	return 'product'.$id;
 // });
 
-Route::get('/product/{pid?}', 'ProductController@showProduct');
 
 /*
 |--------------------------------------------------------------------------

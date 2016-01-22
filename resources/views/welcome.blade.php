@@ -25,18 +25,19 @@
                 {{--<img src="http://7xkn9n.com1.z0.glb.clouddn.com/image%2F55acdbb4b84b4.jpeg_d320.jpg" alt=""/>--}}
             </div>
         </div>
-        @foreach ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as $index)
-            <div class="topic">
+        @foreach ($topics as $topic)
+            <div class="topic" id="Topic-{{$topic->id}}">
                 <div class="topic-description">
-                    <a href="/topic/0"> 为了让他叫知道 购买 RX 100 的有多少坑, 我来摆一摆今天我的经验, 首先.... </a>
+                    <a href="/topic/{{$topic->id}}"> {{$topic->title}}</a>
                 </div>
                 <div class="topic-meta">
-                    <span class="tag"><i class="fa fa-square text-info"></i> 测评</span>
+                    <span class="tag"><i class="fa fa-square text-info"></i> 测评 </span>
                     <span> 5 回复 </span>
                     <span> 352 浏览 </span>
                     <span> 6小时前更新 </span>
                 </div>
             </div>
         @endforeach
+        {!! $topics->render() !!}
     </div>
 @endsection
