@@ -28,13 +28,19 @@
         @foreach ($topics as $topic)
             <div class="topic" id="Topic-{{$topic->id}}">
                 <div class="topic-description">
-                    <a href="/topics/{{$topic->id}}"> <img class="avatar" src="{{$topic->product->cover}}"/>  {{$topic->title}}</a>
+                    <a href="/topics/{{$topic->id}}"> <img class="avatar" src="{{$topic->product->cover}}"/> {{$topic->title}}</a>
                 </div>
                 <div class="topic-meta">
-                    <span class="tag"><i class="fa fa-square text-info"></i> 测评 </span>
-                    <span> 5 回复 </span>
-                    <span> 352 浏览 </span>
-                    <span> 6小时前更新 </span>
+                    <span class="tags">
+                        @foreach ($topic->tags as $tag)
+                            <span class="tag">
+                                <i class="fa fa-square " style="color:{{$tag->color}}"></i>
+                                {{$tag->name}}
+                            </span>
+                        @endforeach
+                    </span>
+                    <span> {{$topic->reply_count}} 回复 </span>
+                    <span> {{$topic->page_view_count}} 浏览 </span>
                 </div>
             </div>
         @endforeach

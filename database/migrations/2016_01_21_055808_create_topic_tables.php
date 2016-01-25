@@ -48,6 +48,8 @@ class CreateTopicTables extends Migration
             // topic page views
             $table->integer('page_view_count')->default(0)->index();
 
+            $table->integer('reply_count')->default(0)->index();
+
             // topic vote count
             $table->integer('vote_count')->default(0)->index();
 
@@ -55,9 +57,6 @@ class CreateTopicTables extends Migration
             $table->boolean('display')->default(true);
 
             $table->softDeletes();
-
-            // topic timestamps modified
-            $table->timestamp('modified_at')->default('0000-00-00 00:00:00');
 
             // topic timestamps create_at
             $table->timestamps();

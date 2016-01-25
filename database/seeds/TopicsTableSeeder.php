@@ -27,7 +27,10 @@ class TopicsTableSeeder extends Seeder
                 'user_id'     => $faker->randomElement($users),
                 'keywords'    => $faker->sentence,
                 'description' => $faker->sentence(10),
-                'content'     => $faker->sentence(100)
+                'content'     => $faker->sentence(100),
+                'page_view_count' => rand(10, 3059),
+                'vote_count' => rand(0, 199),
+                'reply_count' => rand(0, 100)
             ]);
         }
 

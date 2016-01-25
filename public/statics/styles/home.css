@@ -845,9 +845,12 @@ nav.post-controls .post-admin-menu li i.fa {
   display: inline-block;
   float: right;
 }
-.topic .topic-meta span {
+.topic .topic-meta > span {
   display: inline-block;
   color: #999;
   font-size: 12px;
   margin-left: 25px;
+}
+.topic .topic-meta span.tag {
+  margin-right: 5px;
 }

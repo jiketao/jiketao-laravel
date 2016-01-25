@@ -38,6 +38,6 @@ class Topic extends Model
     }
 
     public function tags() {
-        return $this->belongsToMany('App\Models\Tag', 'App\Models\topic_tag_relationship', 'topic_id', 'tag_id');
+        return $this->belongsToMany('App\Models\Tag', 'topic_tag_relationships', 'topic_id', 'tag_id');
     }
 }
