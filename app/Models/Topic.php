@@ -12,6 +12,7 @@ class Topic extends Model
                     ->paginate($limit);
     }
 
+
     public function getTopicsWithFilter($filter, $limit = 20) {
         return $this->applyFilter($filter)
                     ->paginate($limit);
@@ -34,5 +35,9 @@ class Topic extends Model
 
     public function product() {
         return $this->belongsTo('App\Models\Product', 'product_id');
+    }
+
+    public function tags() {
+        return $this->belongsToMany('App\Models\Tag', 'App\Models\topic_tag_relationship', 'topic_id', 'tag_id');
     }
 }

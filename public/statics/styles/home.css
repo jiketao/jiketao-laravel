@@ -813,7 +813,7 @@ nav.post-controls .post-admin-menu li i.fa {
 }
 .topic {
   border-top: solid 1px #eee;
-  padding: 15px 0;
+  padding: 8px 0;
 }
 .topic:last-child {
   border-bottom: solid 1px #eee;
@@ -830,10 +830,18 @@ nav.post-controls .post-admin-menu li i.fa {
   font-weight: bold;
   display: inline-block;
 }
+.topic .topic-description .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  margin-right: 10px;
+}
 .topic .topic-description a {
   color: #333;
 }
 .topic .topic-meta {
+  line-height: 30px;
+  vertical-align: middle;
   display: inline-block;
   float: right;
 }
@@ -841,5 +849,5 @@ nav.post-controls .post-admin-menu li i.fa {
   display: inline-block;
   color: #999;
   font-size: 12px;
-  margin-left: 5px;
+  margin-left: 25px;
 }

@@ -18,15 +18,15 @@ class CreateTagTables extends Migration
             $table->string('name');
             $table->text('description');
             $table->timestamps();
-
+            $table->string('color')->nullable();
             $table->integer('topic_count')->default(0);
         });
 
-        Schema::create('topic_tag_relationship', function(Blueprint $table) {
+        Schema::create('topic_tag_relationships', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('topic_id');
             $table->integer('tag_id');
-            $table->integer('product_id');
+            $table->timestamps();
         });
     }
 
@@ -38,6 +38,6 @@ class CreateTagTables extends Migration
     public function down()
     {
         Schema::drop('tags');
-        Schema::drop('topic_tag_relationship');
+        Schema::drop('topic_tag_relationships');
     }
 }

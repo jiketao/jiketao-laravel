@@ -22,7 +22,7 @@
 
 .topic {
   border-top: solid 1px @border-color;
-  padding: 15px 0;
+  padding: 8px 0;
   &:last-child {
     border-bottom: solid 1px @border-color;
   }
@@ -37,19 +37,27 @@
   .topic-description {
     font-weight: bold;
     display: inline-block;
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 2px;
+      margin-right: 10px;
+    }
     a {
       color: #333;
     }
   }
 
   .topic-meta {
+    line-height: 30px;
+    vertical-align: middle;
     display: inline-block;
     float: right;
     span {
       display: inline-block;
       color: #999;
       font-size: 12px;
-      margin-left: 5px;
+      margin-left: 25px;
     }
   }
 }

@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
         'categories',
         'products',
         'topics',
-        'replies'
+        'replies',
+        'tags',
+        'topic_tag_relationships'
     ];
 
     protected  $seeders = [
@@ -23,7 +25,9 @@ class DatabaseSeeder extends Seeder
         'CategoriesTableSeeder',
         'ProductsTableSeeder',
         'TopicsTableSeeder',
-        'RepliesTableSeeder'
+        'RepliesTableSeeder',
+        'TagsTableSeeder',
+        'topic_tag_relationshipsTableSeeder'
     ];
 
     public function run()
