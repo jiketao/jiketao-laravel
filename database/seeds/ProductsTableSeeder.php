@@ -33,14 +33,14 @@ class ProductsTableSeeder extends Seeder
                 'keywords'    => $faker->sentence(5),
                 'cover'       => $faker->imageUrl,
                 'category_id' => $faker->randomElement($cate_ids),
-                'user_id'     => 0 // admin
+                'user_id'     => 1 // admin
              ]);
 
             $detailTopic = Topic::create([
                 'title'       => $name.'详情',
                 'slug'        => $name,
                 'product_id'  => $product->id,
-                'user_id'     => 0,
+                'user_id'     => 1,
                 'keywords'    => $name,
                 'description' => $description,
                 'content'     => $faker->sentence(100),

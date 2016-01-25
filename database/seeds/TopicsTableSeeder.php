@@ -6,14 +6,6 @@ use App\Models\User;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 
-function c2a($collection) {
-    $arr = [];
-    foreach($collection as $it) {
-        $arr[] = $it;
-    }
-    return $arr;
-}
-
 class TopicsTableSeeder extends Seeder
 {
     /**

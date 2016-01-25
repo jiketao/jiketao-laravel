@@ -15,6 +15,14 @@ class UsersTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
+        User::create([
+            'name'     => 'admin',
+            'password' => 'admin_6174',
+            'email'    => 'admin@geeektao.com',
+            'avatar'   => $faker->imageUrl(100, 100, 'cats'),
+            'introduction' => 'geeektao admin',
+            'signature' => 'asiojoiqrq2391aasdfa'
+        ]);
         foreach (range(1, 50) as $index) {
             User::create([
                 'name'      => $faker->name,

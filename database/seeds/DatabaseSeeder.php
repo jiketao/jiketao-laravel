@@ -14,14 +14,16 @@ class DatabaseSeeder extends Seeder
         'users',
         'categories',
         'products',
-        'topics'
+        'topics',
+        'replies'
     ];
 
     protected  $seeders = [
         'UsersTableSeeder',
         'CategoriesTableSeeder',
         'ProductsTableSeeder',
-        'TopicsTableSeeder'
+        'TopicsTableSeeder',
+        'RepliesTableSeeder'
     ];
 
     public function run()
