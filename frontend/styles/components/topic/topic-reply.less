@@ -1,4 +1,29 @@
 
-.topic-avatar {
-  width: 45px
+.topic-reply {
+  margin:20px 0;
+  position: relative;
+  .topic-avatar {
+    width: 45px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .topic-body {
+    padding-left: 59px;
+    .post-menu-area {
+      float: right;
+    }
+  }
+  .gutter {
+    position: absolute;
+    right: -60px;
+    top: 0;
+    display: none;
+  }
+  &:hover {
+    .gutter {
+      display: inherit;
+    }
+  }
 }

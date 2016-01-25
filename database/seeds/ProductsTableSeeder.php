@@ -23,7 +23,7 @@ class ProductsTableSeeder extends Seeder
             $cate_ids[] = $category->id;
         }
 
-        foreach (range(1, 100) as $index) {
+        foreach (range(1, 10) as $index) {
             $name = $faker->name;
             $description = $faker->sentence(10);
             $product = Product::create([

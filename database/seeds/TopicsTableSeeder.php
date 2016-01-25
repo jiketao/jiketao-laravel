@@ -19,7 +19,7 @@ class TopicsTableSeeder extends Seeder
         $products =  c2a(Product::lists('id'));
         $users = c2a(User::lists('id'));
 
-        foreach (range(1, 200) as $index) {
+        foreach (range(1, 20) as $index) {
             Topic::create([
                 'title'       => $faker->sentence(6),
                 'slug'        => $faker->name,

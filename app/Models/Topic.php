@@ -40,4 +40,12 @@ class Topic extends Model
     public function tags() {
         return $this->belongsToMany('App\Models\Tag', 'topic_tag_relationships', 'topic_id', 'tag_id');
     }
+
+    public function replies() {
+        return $this->hasMany('App\Models\Reply', 'topic_id');
+    }
+
+    public function replyCount() {
+//        return $this->hasMany('App\Models\Reply', 'topic_id')->
+    }
 }

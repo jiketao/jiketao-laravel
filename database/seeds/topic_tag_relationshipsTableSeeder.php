@@ -18,7 +18,7 @@ class topic_tag_relationshipsTableSeeder extends Seeder
         $faker = Faker::create();
         $topics =  c2a(Topic::lists('id'));
         $tags = c2a(Tag::lists('id'));
-        foreach(range(0, 300) as $index) {
+        foreach(range(0, 30) as $index) {
             topic_tag_relationship::create([
                 'topic_id' => $faker->randomElement($topics),
                 'tag_id'   => $faker->randomElement($tags)

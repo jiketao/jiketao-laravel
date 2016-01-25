@@ -790,8 +790,31 @@ nav.post-controls .post-admin-menu li i.fa {
   font-size: 1.286em;
   line-height: 52px;
 }
-.topic-avatar {
+.topic-reply {
+  margin: 20px 0;
+  position: relative;
+}
+.topic-reply .topic-avatar {
   width: 45px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.topic-reply .topic-body {
+  padding-left: 59px;
+}
+.topic-reply .topic-body .post-menu-area {
+  float: right;
+}
+.topic-reply .gutter {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  display: none;
+}
+.topic-reply:hover .gutter {
+  display: inherit;
 }
 .topic-nav {
   margin-bottom: 0;

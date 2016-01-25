@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
             'introduction' => 'geeektao admin',
             'signature' => 'asiojoiqrq2391aasdfa'
         ]);
-        foreach (range(1, 50) as $index) {
+        foreach (range(1, 10) as $index) {
             User::create([
                 'name'      => $faker->name,
                 'password'  => $faker->password,

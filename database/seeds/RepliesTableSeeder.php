@@ -19,7 +19,7 @@ class RepliesTableSeeder extends Seeder
         $topics =  c2a(Topic::lists('id'));
         $users = c2a(User::lists('id'));
 
-        foreach (range(1, 200) as $index) {
+        foreach (range(1, 100) as $index) {
             Reply::create([
                 'topic_id'  => $faker->randomElement($topics),
                 'user_id'     => $faker->randomElement($users),
