@@ -36,28 +36,18 @@ Route::get('/categories/{cid?}', [
     'uses' => 'PagesController@showCategoriesProducts'
 ]);
 
-// 引导用户到新浪微博的登录授权页面
-Route::get('auth/weibo', 'Auth\AuthController@weibo');
-
-// 用户授权后新浪微博回调的页面
-Route::get('auth/callback', 'Auth\AuthController@callback');
-
-// Route::get('/product/{pid?}', function($id="1") {
-// 	return 'product'.$id;
-// });
-
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+|  Authentication Routes
 |--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
 */
-
-Route::group(['middleware' => ['web']], function () {
-    // 
-});
+Route::get('/user/login', [
+	'as'   => 'login',
+	'uses' => 'Auth\AuthController@showLogin'
+]);
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::get('auth/weibo', 'Auth\AuthController@weibo');
+Route::get('auth/weibo/callback', 'Auth\AuthController@weiboCallback');

@@ -12,7 +12,7 @@
                 {{$topic->title}}
             </h2>
             <article>
-                {{$topic->content}}
+                {!! $topic->content !!}
             </article>
 
             <section  class="post-menu-area clearfix">

@@ -1,7 +1,7 @@
 <div class="product-header well " style="background-image:url({{$product->cover}})">
     <div class="row-wrap">
         <h1 class="text-center">{{$product->name}}</h1>
-    </div>f
+    </div>
     <ul class="product-nav-box">
         <li class="nav-item active"><a href="/products/{{$product->id}}">论坛</a></li>
         <li class="nav-item">参数</li>
