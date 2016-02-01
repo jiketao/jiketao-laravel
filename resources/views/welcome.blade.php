@@ -6,21 +6,22 @@
     <div class="topics-container row-wrap">
         <br>
         <ul class="topic-nav">
-            <li class="nav-item">所有分类 <i class="fa fa-caret-right"></i></li>
+            <li class="nav-item">话题标签<i class="fa fa-caret-right"></i></li>
             <li class="nav-item active">最新</li>
             <li class="nav-item">热门</li>
+            <li class="nav-item">产品</li>
             <li class="nav-item">分类</li>
         </ul>
         <div class="topic-about topic">
-            <h3 class="topic-title"><i class="fa fa-thumb-tack"></i> 极客淘宗旨</h3>
+            <h3 class="topic-title"><i class="fa fa-thumb-tack"></i> 宗旨 </h3>
             <div class="topic-description">
                 <p>
-                    TO BE 中国最棒的极客产品信息中心, 您可以在这里
+                   " 每个人都是生活的极客, 在这里做最极客的你!"
                 </p>
                 <ol>
-                    <li> 搜索极客产品, 了解, 学习, 购买, 二手销售</li>
-                    <li> 了解极客产品的最新动态, 购买渠道, 优惠信息</li>
-                    <li> 分享交流极客产品使用,购买心得</li>
+                    <li> 找到最酷最极客的产品 </li>
+                    <li> 获取产品最新咨询, 购买渠道, 优惠信息</li>
+                    <li> 分享产品的使用经验, 教程 </li>
                 </ol>
                 {{--<img src="http://7xkn9n.com1.z0.glb.clouddn.com/image%2F55acdbb4b84b4.jpeg_d320.jpg" alt=""/>--}}
             </div>

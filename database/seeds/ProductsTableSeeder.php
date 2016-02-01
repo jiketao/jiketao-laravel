@@ -33,7 +33,7 @@ class ProductsTableSeeder extends Seeder
                 $name = $productData['meta']['title'];
                 $content = '';
                 if (isset($productData['content'])) {
-                    $content = $productData['content'];
+                    $content = str_replace('<h2 class="title">百科词条</h2>', '', $productData['content']);
                 }
                 $klass = $productData['meta']['class']['text'];
                 $category = Categories::where('name', $klass)->get();
